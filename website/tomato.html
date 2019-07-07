@@ -1,0 +1,240 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title> סלקט - עגבנייה</title>
+    <meta name="description" content="how to choose good tomato" />
+    <meta name="keywords" content="tomato, healthy, vegan, good vegetables, how to choose tomato" />
+    <meta name="author" content="inbar tuchman, yuval goldstein, hen guy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alef&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="../Images/leaf.png">
+
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+          crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="container">
+        <article role="article">
+            <div id="bgDark">
+                <header role="banner">
+                    <a name="top"></a>
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="Images/index/logo.png" alt="סלקט פשוט לבחור ירקות ופירות" />
+                        </a>
+                    </div>
+                    <nav aria-label="כפתור דילוג על תוכן">
+                        <ul class="skipLinks">
+                            <li><a href="#main">דילוג לתוכן</a></li>
+                            <li><a href="#video">דילוג לסרטון הסבר</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="תפריט ניווט משני" id="topNav">
+                        <ul>
+                            <li><a aria-label="טיפים ומיתוסים קישור לא פעיל" class="notActive" href="#">טיפים ומיתוסים</a><span class="leaf"></span></li>
+                            <li><a href="about.html">אודות</a></li>
+                        </ul>
+                    </nav>
+                    <!-- תפריט ניווט ראשי שהוא סטיקי שנשאר על המסך עם המשתמש -->
+                    <nav>
+                        <div aria-hidden="true" id="myNav" class="overlay" align="right">
+                            <a aria-label="לחץ כאן כדי לצאת מתפריט הניווט חזרה לעמוד" javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div aria-hidden="true" href="#" class="overlay-content">
+                                <span id="navLogo"></span>
+                                <h2 aria-expanded="true" class=" fontGveret ">המדריך השלם</h2>
+                                <p>לחץ על האות הראשונה של הפרי או הירק שמעניין אותך ובחר אותו מהמדף!</p>
+                                <a onclick="show_hide(this,'alef')" class="navShape fontGveret" href="#">א</a>
+                                <a class="navShape notActive fontGveret" href="#">ב-ג</a>
+                                <a onclick="show_hide(this,'DaletHet')" class="navShape fontGveret" href="#">ד-ח</a>
+                                <a class="navShape notActive fontGveret" href="#">כ-ל</a>
+                                <a onclick="show_hide(this,'memNun')" class="navShape fontGveret" href="#">מ-נ</a>
+                                <a onclick="show_hide(this,'samehAen')" class="navShape fontGveret" href="#">ס-ע</a>
+                                <a class="navShape notActive fontGveret" href="#">פ-צ</a>
+                                <a class="navShape notActive fontGveret" href="#">ר-ש</a>
+                                <a class="navShape notActive fontGveret" href="#">ת</a>
+
+                                <div class="myElement">
+                                    <span id="alef" class="shelfs twoShelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="rightShelf">
+                                            <a class="relative notActive" href="0#"><img src="images/nav/afrsemon.png" width="43" height="44" alt="" /><span class="navText navTextShelfs">אפרסמון</span></a>
+                                            <a class="relative notActive" href="0#"><img src="images/nav/artishok.png" width="82" height="71" alt="" /><span class="navText navTextShelfs">ארטישוק</span></a>
+                                            <a class="relative notActive" href="0#"><img src="images/nav/avoc.png" width="78" height="67" alt="" /><span class="navText navTextShelfs">אבוקדו</span></a>
+                                            <a class="relative" href="wmelon.html"><img src="images/nav/watermelon.png" width="99" height="90" alt="" /><span class="Fix">אבטיח</span></a>
+                                        </span>
+                                        <span class="leftShelf">
+                                            <a href="#" class="relative notActive"><img src="images/nav/pear.png" width="39" height="51" alt="" /><span class="navText navTextShelfs">אגס</span></a>
+                                            <a href="#" class="relative notActive"> <img src="images/nav/pina.png" width="63" height="128" alt="" /><span class="Fix">אננס</span></a>
+                                            <a href="#" class="relative notActive"><img src="images/nav/ashkolit.png" width="71" height="65" alt="" /><span class="navText navTextShelfs">אשכולית</span></a>
+                                            <a href="#" class="relative notActive"><img src="images/nav/peach.png" width="63" height="62" alt="" /><span class="navText navTextShelfs">אפרסק</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="DaletHet" class="shelf shelfs " aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelf">
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dovdevan.png" width="53" height="48" alt="" /><span class="navText navTextShelf">דובדבן</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dalorit.png" width="59" height="77" alt="" /><span class="navText navTextShelf">דלורית</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dlat.png" width="74" height="65" alt="" /><span class="navText navTextShelf">דלעת</span></a>
+                                            <a id="hazil" href="eggplant.html" class="relative"><img src="Images/nav/hazil.png" width="78" height="47" alt="" /><span class="navText navTextShelf">חציל</span></a>
+                                            <a id="hasa" href="#" class="relative notActive"><img src="Images/nav/hasa.png" width="83" height="72" alt="" /><span class="navText navTextShelf">חסה</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="memNun" class="shelf shelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelf">
+                                            <a href="cucumber.html" class="relative "><img src="Images/nav/cuc.png" width="81" height="40" alt="" /><span class="navText navTextShelf">מלפפון</span></a>
+                                            <a id="melonNav" href="#" class="relative notActive"><img src="Images/nav/melon.png" width="71" height="74" alt="" /><span class="navText navTextShelf">מלון</span></a>
+                                            <a id="mango" href="#" class="relative notActive"><img src="Images/nav/mango.png" width="62" height="50" alt="" /><span class="navText navTextShelf">מנגו</span></a>
+                                            <a id="mand" href="#.html" class=" notActive relative"><img src="Images/nav/mandarina.png" width="69" height="54" alt="" /><span class="navText navTextShelf">מנדרינה</span></a>
+                                            <a id="nac" href="#" class="relative notActive"><img src="Images/nav/nact.png" width="52" height="48" alt="" /><span class="navText navTextShelf">נקטרינה</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="samehAen" class="shelf shelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelfFix">
+                                            <a id="selek" class="relative notActive"><img src="Images/nav/selek.png" width="107" height="89" alt="" /><span class="navText navTextShelf">סלק</span></a>
+                                            <a id="seleri" href="#" class="relative notActive"><img src="Images/nav/seleri.png" width="82" height="44" alt="" /><span class="navText navTextShelf">סלרי</span></a>
+                                            <a href="tomato.html" class="relative "><img src="Images/nav/tomato.png" width="44" height="40" alt="" /><span class="navText navTextShelf">עגבנייה</span></a>
+                                            <a href="#" class=" notActive relative"><img src="Images/nav/grapes.png" width="77" height="53" alt="" /><span class="navText navTextShelf">ענבים</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/armonim.png" width="99" height="48" alt="" /><span class="navText navTextShelf">ערמונים</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!--<span id="book"></span>-->
+
+                            </div>
+                            <!-- הכפתור של התפריט ניווט -->
+                        </div>
+                        <a id="navBtn" href="#0" ;cursor:pointer" onclick="openNav()" aria-label="לחץ כאן לסגירת התפריט וחזרה לעמוד התוכן">
+                            <i class="fa fa-bars navIcon"></i>
+                            <!--<span id="hamburger">&#9776;</span>--> <!--<span class="fontGveret" id="navbtnTxt">למדריך השלם</span>-->
+                        </a>
+                    </nav>
+                    <!-- פה מתחיל תוכן העמוד -->
+                    <div class="tomatoTitle">
+                        <p>פשוט לבחור נכון</p>
+                        <h1>עגבנייה</h1>
+                    </div>
+
+                    <div id="tomLogo" aria-labelledby="h1"></div>
+
+                </header>
+            </div>
+            <div id="posFixTop">
+                <div class="topTriangle" id="topTrianglepg"></div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="findOne">
+                <p data-aos="fade-up" data-aos-duration="1200">
+                    בשביל למצוא את האחת
+                    <br />
+                    זה הזמן להשתמש בחושים שלך!
+                </p>
+            </div>
+            <section role="region" id="main">
+                <h2 data-aos="fade-up" data-aos-duration="1200" data-aos-easing="linear" class="steps">
+                    שלב ראשון - נסתכל! <span id="eyeT" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800" aria-label="השתמש בחוש הראייה" />
+                </h2>
+                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="underline"></div>
+                <ul class="rshima">
+                    <li data-aos="fade-up" data-aos-duration="1200" class=" info">
+                        עגבנייה בשלה תהיה תמיד בצבע  <span class="red">אדום!</span>  עגבנייה  <span class="green">ירוקה</span>  תבשיל עד סוף השבוע
+                        <br />
+                        שווה לחשוב בזמן הקנייה למתי נרצה אותה...
+                        <br />
+                        <span id="range"></span>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1200" class="info">
+                        נשים לב שקליפת העגבנייה -
+                        <span id="noSpot" class="absolute">ללא כתמים</span><span id="noHole" class="absolute">ללא חורים</span><span id="strech" class="absolute">מתוחה</span><span id="scratch" class="absolute">ללא שריטות</span><span id="sheka" class="absolute">ללא שקעים</span>
+                        <div id="tomList"></div>
+                    </li>
+                </ul>
+                <div class="relative"><div data-aos="fade-up" data-aos-duration="1200" class="scaleTom"></div></div>
+
+            </section>
+            <section role="region">
+                <h2 data-aos="fade-up" data-aos-duration="1200" class="steps">
+                    שלב שני - נרגיש! <span data-aos="fade-up" data-aos-duration="1200" id="handT">  </span>
+                </h2>
+                <div data-aos="fade-up" data-aos-duration="1200" class="underline"></div>
+                <ul class="rshima">
+                    <li data-aos="fade-up" data-aos-duration="1200" class="info "> העגבנייה צריכה להיות  <b>קשה</b>  יחסית למגע אך מגיבה בעת לחיצה</li>
+                    <li data-aos="fade-up" data-aos-duration="1200" class="info ">מדד לעסיסיות - נבחר בעגבנייה שכשנרים אותה תהיה <div class="heavy">כבדה</div>  משחשבנו </li>
+                </ul>
+            </section>
+            <section role="region">
+                <h2 data-aos="fade-up" data-aos-duration="800" class="steps margin ">
+                    שלב שלישי - נריח!  <span data-aos="fade-up" data-aos-duration="800" id="noseT" aria-label="נשתמש בחוש הריח"></span>
+                </h2>
+                <div data-aos="fade-up" data-aos-duration="800" class="underline"></div>
+                <ul class="rshima">
+                    <li data-aos="fade-up" data-aos-duration="800" class="info">
+                        נקרב את העגבנייה אלינו ונצפה להריח ריח אדמה.
+                        <br />
+                        לחיצה עדינה על העגבנייה תפיץ את הריח ותעיד על טריותה
+                    </li>
+                </ul>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear" id="landTom"></div>
+            </section>
+            <section role="region">
+                <div data-aos="fade-up" class="underlines">
+                    <div class="posFix">
+                        <h2 data-aos="fade-up" data-aos-duration="800" class="steps">
+                            תמיד כדאי לדעת  <span data-aos-duration="800" id="blub" class="blubFix" aria-label=""></span>
+                        </h2>
+                        <ul class="knowRed">
+                            <li data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear" class="info ">עונה -  יולי עד אוגוסט הם החודשים בהם עגבניות הן העסיסיות ביותר!</li>
+                            <li data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear" class="info ">פרי או ירק - על אף שמבחינה קולינרית עגבנייה מוגדרת כירק, היא נחשבת לפרי.</li>
+                            <li data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear" class="info ">זנים - קיימים למעלה מתשעה זנים שונים. </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div id="lowerTri" class="lowerTripos"></div>
+            <div class="bgLightClrPg bgLightClr">
+                <section role="region">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" id="toms"></div>
+                    <h2 data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" class="video ">ולסיכום - סרטון שסוגר ת'פינה</h2>
+                    <span data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" id="fakevidT" class="iframe  notActive" aria-label="סרטון ההסבר לא פעיל"></span>
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" id="topBtn"><a id="topLink" href="#top">לחזרה למעלה<br /> לחץ כאן</a></div>
+
+                </section>
+
+                <footer id="pageFooter" role="contentinfo">
+                    <ul>
+
+                        <li><a href="siteMap.html">מפת האתר</a><span class="leaf"></span></li>
+                        <li><a target="_blank" href="https://inbar662.github.io/choose_wise/fridge-try.html">ייצוג אינטראקטיבי</a><span class="leaf"></span></li>
+                        <li><a href="contact.html">צור קשר</a></li>
+                    </ul>
+                    <div class="credit"><a href="https://www.freepik.com/free-photos-vectors/background">Background photo אבוקדוcreated by rawpixel.com - www.freepik.com</a></div>
+                    <div class="credit"><a href="https://www.freepik.com/free-photos-vectors/background">Background photo created by 4045 - www.freepik.com</a></div>
+                    <div class="credit">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div class="credit">Icons made by <a href="https://www.flaticon.com/authors/zlatko-najdenovski" title="Zlatko Najdenovski">Zlatko Najdenovski</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div class="credit">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                </footer>
+            </div>
+        </article>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

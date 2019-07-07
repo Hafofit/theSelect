@@ -1,0 +1,1779 @@
+﻿@font-face {
+    font-family: 'GveretLevinAlefAlefAlef-Regular';
+    src: url('./fonts/GveretLevinAlefAlefAlef-Regular.eot');
+    src: url('./fonts/GveretLevinAlefAlefAlef-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/GveretLevinAlefAlefAlef-Regular.ttf') format('truetype');
+}
+
+body {
+    direction: rtl;
+    background-color: white;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1366px;
+    background-color: #D4EEFF;
+}
+
+/* Main navigation menu - underline and leaf decorations above "the complete guide" */
+#navLogo {
+    background-image: url('../Images/nav/title.png');
+    width: 144px;
+    height: 108px;
+    position: relative;
+    top: 75px;
+    left: 85px;
+    display: inline-block;
+    z-index: 50;
+}
+
+/* Main navigation menu - location and shape of alphabet container blocks */
+.navShape {
+    width: 69px;
+    height: 33px;
+    background-color: #92C6FF;
+    display: inline-block;
+    margin: 3px;
+    padding-top: 7px;
+    font-size: 18pt;
+}
+
+
+
+/*#navbtnTxt {
+    position: relative;
+    top: 25px;
+    font-size: 18pt;
+    color: white;
+}*/
+
+/* Main navigation button - hamburger styling */
+.navIcon {
+    position: relative;
+    top: 27px;
+    color: #E4F1F9;
+}
+
+/*כפתור ניווט הראשי - איך שהכפתור עצמו נראה*/
+/* Main navigation button - button styling ( see .navIcon for hamburger styling) */
+#navBtn {
+    width: 100px;
+    /*box-shadow: 3px 3px ;*/
+    height: 100px;
+    border-radius: 50px;
+    background-color: #4d4d4d;
+    /*border: solid 2px #c3cecd;*/
+    display: block;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 15px;
+    left: 15px;
+    z-index: 800;
+    font-size: 35pt;
+}
+
+/* Main navigation menu - title */
+#myNav h2 {
+    font-size: 50pt;
+    font-weight: 300;
+}
+
+/* Main navigation menu - instructions under title */
+#myNav p {
+    font-size: 19pt;
+    margin: 30px;
+}
+
+/* Main navigation menu - style and animation of the menu overlay 
+   (the screen in which the menu is displayed) */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #e4f1f9;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Main navigation menu - right shelf location */
+.rightShelf {
+    position: relative;
+    left: 63px;
+    bottom: 22px;
+    margin: 5px;
+}
+
+/* Main navigation menu - main shelf */
+.singleShelf {
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+
+/* Main navigation menu - left shelf */
+.leftShelf {
+    position: relative;
+    right: 55px;
+    bottom: 25px;
+}
+
+/* Main navigation menu - vegetable label location */
+.navTextShelfs {
+    left: -5px;
+    top: 20px;
+}
+/* Main navigation menu - general shelves properties */
+.shelfs {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: none;
+    top: 50px;
+}
+
+/* Main navigation menu - background image and location for two shelves showing in menu */
+.twoShelfs {
+    background-image: url('../images/nav/shelfs.png');
+    width: 812px;
+    height: 183px;
+}
+
+/* Main navigation menu - background image and location for a single shelf showing in menu */
+.shelf {
+    width: 484px;
+    height: 183px;
+    background-repeat: no-repeat;
+    background-image: url('../Images/nav/shelf.png');
+    display: none;
+}
+
+/* Main navigation menu - vegetable label properties */
+.navText {
+    position: absolute;
+    font-size: 14pt;
+    padding: 5px;
+}
+
+
+
+/* Main navigation menu - general vegetable location adjustment */
+.navTextShelf {
+    top: 22px;
+    left: 5px;
+}
+
+/* Main navigation menu - general adjustment for irregular sized vegetable photos */
+.Fix {
+    position: absolute;
+    left: 9px;
+    top: 23px;
+    font-size: 14pt;
+}
+
+/* Main navigation menu - specific vegetable adjustments (fixing textual overlap) */
+#mand {
+    left: 6px;
+    right: 3px;
+}
+
+#cuc {
+    right: 9px;
+}
+
+#nac {
+    right: 19px;
+}
+
+#melonNav {
+    left: 3px;
+}
+
+#seleri {
+    left: 28px;
+}
+
+#selek {
+    left: 9px;
+}
+
+#hasa {
+    left: 10px;
+}
+
+#hazil {
+    left: 5px;
+}
+
+/* Main navigation menu - single shelf location adjustment */
+.singleShelfFix {
+    margin: 0 auto;
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+
+/* Main navigation menu - content location inside overlay */
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Main navigation menu - hyperlink properties */
+.overlay > a {
+    padding: 9px;
+    text-decoration: none;
+    width: 34px;
+    height: 15px;
+    font-size: 18px;
+    color: #4d4d4d;
+    display: block;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* Main navigation menu - hyperlink reaction properties */
+.overlay a:hover, .overlay a:focus {
+    color: rebeccapurple;
+}
+.closebtn{
+    cursor: pointer;
+}
+/* Main navigation menu - close navigation menu button */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    display: block;
+    width: 30px;
+    height: 300px;
+}
+
+/* Main navigation menu - enlarge alphabet when clicked */
+.open {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    margin: 0 15px;
+}
+
+/* Main navigation menu - display element degenerate class (part of Reut's code) */
+.myElement {
+    display: block;
+}
+
+/* Site logo */
+#logo {
+    position: absolute;
+    top: 10px;
+    margin-right: 30px;
+    z-index: 3;
+}
+
+/* Dark blue background - fixed to the hight of some pages */
+#bgDarkColor {
+    width: 100%;
+    height: 380px;
+    background-color: #C5E3FC;
+}
+
+/* Dark blue background - fixed to the hight of other pages in site (see #bgDarkColor) */
+#bgDark {
+    width: 100%;
+    height: 500px;
+    background-color: #C5E3FC;
+}
+
+/* Light blue color - matches home page height specifically */
+#bgLightClrIndx {
+    background-color: #E4F1F9;
+    width: 100%;
+    height: 726px;
+    position: relative;
+    top: 70px;
+}
+
+/* Light blue color - fixed to the height of some pages */
+.bgLightClr {
+    background-color: #E4F1F9;
+    width: 100%;
+    position: relative;
+    top: 70px;
+}
+
+/* Light blue color - fixed to the height of other pages (see .bgLightClr) */
+.bgLightClrPg {
+    height: 936px;
+}
+
+/* Light blue color - matches eggplant and cucumber pages height specifically (those pages are shorter) */
+.bgLightClrC {
+    height: 886px;
+}
+
+/* Light blue color - matches about page height specifically */
+.bgLightClrA {
+    height: 536px;
+}
+
+/* Light blue color - matches sitemap page height specifically */
+.bgLightClrmap {
+    height: 406px;
+}
+
+/* Light blue color - matches contact page height specifically */
+.bgLightClrcont {
+    height: 306px;
+}
+
+/* About page - box decoration properties */
+#box {
+    background-image: url('../Images/about/box.png');
+    width: 247px;
+    height: 187px;
+    display: block;
+    position: relative;
+    right: 990px;
+    bottom: 180px;
+}
+
+/* Menu leaf decoration - general properties */
+.leaf {
+    background-image: url(../Images/index/leaf.png);
+    width: 18px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    right: 20px;
+}
+
+/* Top Menu of about and contact pages */
+#topNav {
+    z-index: 2;
+    /*border-bottom: 10px solid;*/
+    border-radius: 3px;
+    border-color: #92C6FF;
+    text-align: center;
+    width: 740px;
+    align-content: center;
+    position: relative;
+    right: 820px;
+    top: 45px;
+}
+
+    /* Specific list properties of top menu in about and contact page */
+    #topNav li {
+        display: inline-block;
+        padding: 0 0 25px 45px;
+        /*font-family: Alef;*/
+        font-size: 19pt;
+    }
+
+        #topNav li a {
+            text-decoration: none;
+        }
+
+            #topNav li a:hover {
+                text-decoration: underline;
+            }
+
+/* hyperlink reaction properties of top menu in about and contact page */
+a:hover, a:focus {
+    color: #A301FF;
+    text-decoration: underline;
+}
+
+/* Sitewide properties of textual and container elements */
+a, p, h2, h3, h1, li, span, b, div, form, label, input, textarea {
+    color: #4d4d4d;
+    font-family: 'Alef', sans-serif;
+    text-decoration: none;
+}
+
+/* Sitewide welcoming paragraph properties */
+.welc {
+    position: relative;
+    top: 110px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 25pt;
+    z-index: 2;
+}
+
+/* Gveret Levin font specifier */
+.fontGveret {
+    font-family: 'GveretLevinAlefAlefAlef-Regular';
+}
+
+/* Dark color top triangle (for a skewed dark-to-light background transition) */
+.topTriangle {
+    width: 0;
+    height: 0;
+    border-top: 70px solid #C5E3FC;
+    border-bottom: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 1366px solid transparent;
+    position: relative;
+    top: 169px;
+    z-index: 1;
+}
+
+/* Whitespace for video in cucumber and eggplant pages (less content on those
+   pages requires "artificial whitespace" to push the video element down */
+.spaceTop {
+    position: relative;
+    top: 63px;
+}
+
+/* Dark color top triangle position fix for shorter pages */
+#topTrianglepg {
+    position: relative;
+    top: 170px;
+}
+/* Adjustment for top triange position */
+#posFixTop {
+    position: relative;
+    bottom: 170px;
+    z-index: 1;
+}
+
+/* Dark color top triangle properties */
+#lowerTri {
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 70px solid #e3f0f8;
+    border-left: 0px solid transparent;
+    border-right: 1366px solid transparent;
+    z-index: 1;
+    position: relative;
+}
+
+/* Adjustment for lower triangle position */
+.lowerTripos {
+    top: 70px;
+}
+
+/* Adjustment for triangle position */
+.triPos {
+    top: 100px;
+}
+
+/* Popular items menu in homepage (including inner element properties) */
+#popular {
+    height: 500px;
+    position: relative;
+    top: 100px;
+}
+
+#popNav ul li {
+    display: inline-block;
+}
+
+.popText {
+    text-align: center;
+    font-size: 17pt;
+    position: relative;
+    left: 20px;
+    bottom: 7px;
+}
+
+/*.popName {
+    text-align: center;
+    font-size: 17pt;
+    display: block;
+    margin-top: -35px;
+}*/
+
+/*.hidden {
+    display: none !important;
+}
+.imgHover {
+    display:inline-block;
+}
+
+.imgHover:hover > span:nth-child(1) {
+    display: block !important;
+}
+
+.imgHover:hover > span:last-child {
+    display: none !important;
+}*/
+
+/* Title for popular items menu */
+#popTitle {
+    font-family: Alef;
+    text-align: center;
+    font-size: 23pt;
+    font-weight: 300;
+    position: relative;
+    top: 100px;
+}
+
+
+/* This section includes styling properties, as well as user 
+   response properties for popular menu items (images, background and text) */
+
+/* Lemon popular item */
+.lemon {
+    background-image: url(../Images/index/lemon.png);
+    display: inline-block;
+    width: 290px;
+    height: 272px;
+    position: relative;
+    right: 10px;
+    background-position: top right;
+}
+
+/* popularitem mouse hover and focus changes picture */
+.popHover:hover, .popHover:focus {
+    background-position: top left;
+}
+
+/* Tomato popular item */
+.tomatoN {
+    background-image: url(../Images/index/tomatoN.png);
+    display: inline-block;
+    width: 249px;
+    height: 292px;
+    background-position: top right;
+}
+
+/* Cucumber popular item */
+.cucN {
+    background-image: url(../Images/index/cucnN.png);
+    display: inline-block;
+    width: 239px;
+    height: 262px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 10px;
+}
+
+/* Melon popular item */
+.melon {
+    background-image: url(../Images/index/melon2.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 235px;
+    height: 327px;
+    background-position: top right;
+}
+
+
+/* Watermelon popular item */
+.wMelon {
+    background-image: url(../Images/index/wmelonN.png);
+    display: inline-block;
+    width: 335px;
+    height: 340px;
+    position: relative;
+    left: 30px;
+    background-position: top right;
+}
+
+/* Popular items menu - complete guide button label */
+.toGuide {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 20pt;
+    font-family: Alef;
+}
+
+/* Popular items menu - button properties for the complete guide */
+#btnBorder {
+    background-image: url(../Images/btn.png);
+    background-repeat: no-repeat;
+    width: 219px;
+    height: 48px;
+    display: inline-block;
+    text-align: left;
+    padding: 10px 18px;
+    position: relative;
+    left: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Homepage sticky notes */
+#notes {
+    background-image: url(../Images/index/notes.png);
+    width: 750px;
+    height: 450px;
+    position: relative;
+    right: 420px;
+    font-family: Gveret Levin AlefAlefAlef;
+    font-size: 18pt;
+    line-height: 1.3;
+}
+
+/* General notes location adjustment */
+.note {
+    display: block;
+    width: 300px;
+    position: relative;
+}
+
+/* Specific note location adjustments for all notes */
+
+#notes #apple {
+    display: block;
+    width: 300px;
+    position: relative;
+    top: 170px;
+    right: 45px;
+}
+
+#notes #mushrooms {
+    right: 280px;
+    bottom: 18px;
+    transform: rotate(11deg);
+    -moz-transform: rotate(11deg);
+    -ms-transform: rotate(11deg);
+    -webkit-transform: rotate(11deg);
+    font-size: 20pt;
+}
+
+#notes #mami {
+    bottom: 80px;
+    right: 285px;
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+    padding-top: 60px;
+}
+
+#notes #tips {
+    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    bottom: 221px;
+    right: 516px;
+}
+
+/* Larger header fontsize (for both notes and pages) */
+.bigger {
+    font-size: 28pt;
+}
+
+/* Note title properties */
+#noteTitle {
+    text-align: right;
+    padding-top: 60px;
+    padding-right: 80px;
+    font-size: 23pt;
+    font-weight: 500;
+}
+/* General footer properties, including inner elements */
+footer {
+    border-top: 15px solid #92C6FF;
+    border-radius: 2px;
+    margin-top: 30px;
+    z-index: 5;
+    position: relative;
+    background-color: #E4F1F9;
+}
+/* Footer position adjustment for eggplant and cucumber pages (shorter pages, about same length) */
+#posFooter {
+    background-color: #E4F1F9;
+    top: 350px;
+}
+
+/* Footer position adjustment for watermelon and tomato pages (longer pages, about same length) */
+#pageFooter {
+    top: 283px;
+}
+
+
+
+footer ul {
+    text-align: center;
+    position: relative;
+    left: 15px;
+}
+
+    footer ul li {
+        display: inline-block;
+        font-size: 15pt;
+        margin: 19px;
+    }
+
+/* Footer position adjustment for sitemap */
+#sitemapFooter {
+    top: 400px;
+}
+
+/*.abc > li {
+    display: inline-block;
+    background-color: #92C6FF;
+    text-align: center;
+    margin: 3px;
+    padding-top: 5px;
+    position: relative;
+    top: 60px;
+    right: 350px;
+    font-size: 15pt;
+    font-family: Gveret Levin AlefAlefAlef;
+}
+
+.abc li a {
+    width: 64px;
+    height: 30px;
+    display: inline-block;
+}*/
+
+/* Title style in all item pages */
+.tomatoTitle {
+    position: relative;
+    top: 150px;
+    left: 80px;
+    text-align: center;
+    margin-top: 40px;
+    padding-left: 50px;
+    z-index: 3;
+}
+    /* Header fontsize in item pages */
+    .tomatoTitle > h1 {
+        font-size: 120pt;
+    }
+
+    /* Paragraph fontsize in item pages */
+    .tomatoTitle > p {
+        font-size: 50pt;
+    }
+
+    /* Paragraph fontsize in item pages - specific to about page */
+    .tomatoTitle #about {
+        font-size: 95pt;
+    }
+
+/* Tomato page title picture */
+#tomLogo {
+    position: relative;
+    right: 815px;
+    bottom: 98px;
+    z-index: 3;
+    width: 206px;
+    height: 256px;
+    display: inline-block;
+    background-image: url('../Images/tomPage/tomLogo.png');
+}
+
+
+/*#breadC li{
+    display: inline-block;
+   position: relative;
+   bottom: 50px;
+   right: 30px;
+   z-index: 3;
+}*/
+
+/* Style properties of opening statement in all item pages */
+.findOne {
+    position: relative;
+    text-align: center;
+    left: 40px;
+    font-size: 30pt;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/* List styling for all item pages (spacing and bullets) */
+.rshima {
+    list-style-image: url('../Images/tomPage/bullet.png');
+    line-height: 1.6;
+    padding: 15px;
+    margin: 0px 195px 20px 0px;
+}
+
+/* List styling for about page */
+.checklist > li {
+    list-style-image: url('../Images/about/checkli.png');
+    line-height: 2;
+    padding: 5px;
+}
+
+/* List spacing for about page */
+.checklist {
+    margin: 40px 60px;
+}
+
+/* Titles for steps in item pages */
+.steps {
+    font-size: 50pt;
+    padding: 38px 108px;
+    font-weight: 300;
+}
+/* Title underline for about page */
+.underline {
+    border-image: url('../Images/about/checkli.png');
+    border-bottom: solid 30px black;
+}
+/* list item fontsize for item pages */
+.info {
+    font-size: 21pt;
+}
+
+/* Video title in item pages */
+.video {
+    font-size: 50pt;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Red text highlight */
+.red {
+    color: red;
+}
+
+/* Green text highlight */
+.green {
+    color: green;
+}
+
+/* Tomato colorscale properties (color to freshness picture) */
+#range {
+    position: relative;
+    top: 30px;
+    right: 180px;
+    margin: 30px 0px 130px 0px;
+    background-image: url(../Images/tomPage/range.png);
+    display: block;
+    width: 605px;
+    height: 187px;
+}
+
+/* Tomato outer looks checklist */
+#tomList {
+    position: relative;
+    top: 80px;
+    right: 250px;
+    margin-bottom: 130px;
+    background-image: url(../Images/tomPage/tom.png);
+    width: 640px;
+    height: 335px;
+}
+
+/* Tomato weight section */
+.heavy {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Tomato page - title underline */
+.underline {
+    background-image: url('../Images/tomPage/underline.png');
+    width: 278px;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 38px;
+    right: 78px;
+}
+.underlineE {
+    background-image: url('../Images/eggplant/underlineE.png');
+    width: 278px;
+    bottom: 38px;
+    display: block;
+    height: 50px;
+    right: 300px;
+    right: 78px;
+    background-repeat: no-repeat;
+}
+/* Tomato page - "did you know" red underlines */
+.underlines {
+    background-image: url('../Images/tomPage/underlines.png');
+    background-repeat: no-repeat;
+    width: 1161px;
+    height: 451px;
+    text-align: center;
+    margin-right: 70px;
+}
+/* Tomato page - "did you know" bullets static properties */
+.knowRed > li {
+    list-style: none;
+    position: relative;
+    bottom: 30px;
+    right: 50px;
+    text-align: right;
+}
+
+/* Tomato page - "did you know" bullets color change */
+.knowRed li::before {
+    color: red;
+    display: inline-block;
+    width: 2em;
+    content: "■";
+    padding: 5px;
+}
+
+/* General adjustment for element position - making it relative to parent element */
+.posFix {
+    position: relative;
+    bottom: 30px;
+}
+
+/* Tomato page - to scale picture */
+.scaleTom {
+    background-image: url('../Images/tomPage/scalehandfix.png');
+    width: 293px;
+    height: 505px;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+
+/* Tomato page - smell cues */
+#landTom {
+    background-image: url('../Images/tomPage/tomatos.png');
+    width: 555px;
+    height: 266px;
+    position: relative;
+    right: 700px;
+    bottom: 80px;
+    margin-bottom: 40px;
+}
+
+/* Tomato page - misc. picture */
+#toms {
+    background-image: url('../Images/tomPage/tomline.png');
+    width: 192px;
+    height: 140px;
+    position: relative;
+    right: 60px;
+    top: 51px;
+}
+
+/* Tomato page - visual cues */
+#eyeT {
+    width: 64px;
+    height: 64px;
+    background-image: url('../Images/tomPage/eye.png');
+    display: inline-block;
+}
+
+/* Tomato page - texture cues */
+#handT {
+    width: 91px;
+    height: 91px;
+    display: inline-block;
+    background-image: url('../Images/tomPage/hand.png');
+}
+
+/* Tomato page - smelling cues (nose) */
+#noseT {
+    background-image: url('../Images/tomPage/nose.png');
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+}
+
+/* video iframe properties */
+.iframe {
+    position: relative;
+    top: 60px;
+    right: 351px;
+    border-radius: 10px;
+    padding: -1px;
+    border: 8px solid #4d4d4d;
+}
+
+/* Extra margin on top of element (for even spacing) */
+.margin {
+    margin-top: 110px;
+}
+
+/* Lightbulb spacing (in "did you know") otherwise it overlaps with other elements */
+.blubMargin {
+    margin-top: 40px;
+}
+
+/* relative position adjustment */
+.relative {
+    position: relative;
+}
+
+/* Watermelon page logo */
+#wmLogo {
+    background-image: url('../Images/wmelonPage/logoW.png');
+    width: 283px;
+    height: 270px;
+    display: inline-block;
+    position: relative;
+    bottom: 240px;
+    right: 370px;
+}
+
+/* Symetric watermelon picture (for "did you know" section) */
+#sym {
+    background-image: url(../Images/wmelonPage/didyouknow.png);
+    width: 495px;
+    height: 157px;
+    margin: 65px 50px 80px 50px;
+}
+
+/* Textual element rotations */
+.rotat {
+    font-size: 15pt;
+    text-align: center;
+    display: block;
+}
+
+#rotation {
+    -webkit-transform: rotate(-11deg);
+    transform: rotate(-11deg);
+    -ms-transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg);
+    padding-top: 50px;
+}
+
+#rotationn {
+    -webkit-transform: rotate(-9deg);
+    transform: rotate(-9deg);
+    -moz-transform: rotate(-9deg);
+    -ms-transform: rotate(-9deg);
+    padding-right: 75px;
+    padding-top: 30px;
+}
+
+#rotationE {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-9deg);
+    padding-top: 30px;
+}
+
+#symM {
+    position: absolute;
+    left: 240px;
+    bottom: -20px;
+    display: block;
+    width: 349px;
+    height: 338px;
+    background-image: url('../Images/wmelonPage/sym.png');
+}
+
+#sizeM {
+    margin: 90px 150px;
+}
+/* Watermelon "did you know section" horizontal lines */
+#didukno {
+    background-image: url(../Images/wmelonPage/didyouknow2.png);
+    width: 504px;
+    height: 328px;
+    font-size: 15pt;
+    margin: 15px 50px 0px 50px;
+    padding-top: 70px;
+    background-repeat: no-repeat;
+}
+
+/* Watermelon tip - search for imperfections */
+#spot {
+    position: absolute;
+    left: 210px;
+    bottom: 10px;
+    background-image: url('../Images/wmelonPage/spots.png');
+    width: 410px;
+    height:328px;
+}
+
+.rotationn {
+    padding-top: 70px;
+    margin-right: 125px;
+}
+/* Watermelon page - title underlines */
+.underlineW {
+    background-image: url('../Images/wmelonPage/underline.png');
+    width: 278px;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 45px;
+    right: 75px;
+    height: 26px;
+}
+/*about page - underline image*/
+
+.underlineA {
+    background-image: url('../Images/underlineAbout.png');
+    position: relative;
+    bottom: 39px;
+    right: 113px;
+    height: 26px;
+    width: 278px;
+    background-repeat: no-repeat;
+}
+/*watermelon - sound related image*/
+#sound {
+    position: relative;
+    bottom: 50px;
+    right: 830px;
+    display: block;
+    background-image: url('../Images/wmelonPage/sound.png');
+    width: 392px ;
+    height:219PX;
+}
+/*watermelon picture of givol*/
+#givol {
+    position: relative;
+    right: 200px;
+    top: 30px;
+    width: 578px;
+    display: block;
+    height: 351px;
+    background-image: url('../Images/wmelonPage/givol.png');
+}
+/*watermelon - scratches image*/
+
+#sritot {
+    position: relative;
+    right: 607px;
+    top: 30px;
+    display: block;
+    background-image: url('../Images/wmelonPage/scratches.png');
+    width: 418px;
+    height: 372px;
+}
+/*watermelon - size image*/
+
+#scale {
+    position: relative;
+    right: 850px;
+    bottom: 70px;
+    display:block;
+    width: 250px;
+    height: 221px;
+    background-image: url('../Images/wmelonPage/scaleW.png');
+}
+/*watermelon - underlines image */
+
+.underlinesW {
+    background-image: url(../Images/wmelonPage/underlines.png);
+    width: 1161px;
+    height: 362px;
+    background-repeat: no-repeat;
+    margin-right: 70px;
+    text-align: center;
+    justify-content: space-around;
+}
+/*cucumber - underlines under the title*/
+
+.underlineC {
+    background-image: url('../Images/cucPage/underlineC.png');
+    width: 278px;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 40px;
+    right: 79px;
+    height: 26px;
+}
+/*watermelon - did you know list part*/
+
+.knowPink {
+    margin-right: 70px;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+    .knowPink > li {
+        list-style: none;
+        position: relative;
+        bottom: 50px;
+        text-align: right;
+        font-size: 21pt;
+        text-align: right;
+    }
+
+    .knowPink li::before {
+        color: deeppink;
+        display: inline-block;
+        width: 1em;
+        content: "■";
+        padding: 5px;
+    }
+
+#wmelonArt {
+    position: relative;
+    right: 40px;
+    top: 55px;
+}
+/*cucumber - logo*/
+#logoC {
+    display: inline-block;
+    position: relative;
+    bottom: 320px;
+    right: 330px;
+    background-image: url('../Images/cucPage/cuc.png');
+    width: 224px;
+    height: 414px;
+}
+/*cucumber - picture of shape*/
+#shapeC {
+    background-image: url('../Images/cucPage/cucSize.png');
+    width: 516px;
+    height: 440px;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+/*cucumber - picture of color*/
+
+#colorC {
+    background-image: url('../Images/cucPage/Asset 4.png');
+    width: 577PX;
+    height: 351px;
+    margin: 50px 200px 30px 0px;
+}
+/*cucumber - picture of flower*/
+
+#flowerC {
+    background-image: url('../Images/cucPage/flower.png');
+    width: 410px;
+    height: 400px;
+  position: relative;
+  right: 700px;
+}
+/*cucumber - picture of hard one*/
+
+#hardC {
+    background-image: url('../Images/cucPage/strongC.png');
+    width: 470px;
+    height: 369px;
+    margin: 30px 405px 100px 0px;
+}
+/*cucumber - hand icon*/
+
+#handC {
+    display: inline-block;
+    width: 91px;
+    height: 91px;
+    background-image: url('../Images/cucPage/handC.png');
+}
+/*cucumber - eye icon*/
+
+#eyeC {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-image: url('../Images/cucPage/eyeC.png');
+}
+/*cucumber - underlines of did you know*/
+
+#underlinesC {
+    background-image: url('../Images/cucPage/underlinesC.png');
+    width: 1161px;
+    height: 364px;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-right: 85px;
+}
+/*cucumber - did you know part*/
+.knowGreen {
+    margin-right: 70px;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+    .knowGreen > li {
+        list-style: none;
+        position: relative;
+        bottom: 50px;
+        text-align: right;
+        font-size: 23pt;
+        text-align: right;
+    }
+
+    .knowGreen li::before {
+        color: green;
+        display: inline-block;
+        width: 1em;
+        content: "■";
+        padding: 5px;
+    }
+    /*cucumber illustation next to the video*/
+#cucIllus {
+    background-image: url('../Images/cucPage/videoC.png');
+    width: 126px;
+    height: 193px;
+    position: absolute;
+    left: 112px;
+    bottom: 320px;
+    z-index:5;
+}
+/*eggplant logo*/
+#eggLogo {
+    background-image: url('../Images/eggplant/eglogo.png');
+    width: 190px;
+    height: 258px;
+    position: relative;
+    right: 760px;
+    bottom: 80px;
+    z-index: 5;
+}
+/*eggplant - changing text color*/
+#darkp {
+    color: rebeccapurple;
+}
+
+#lightp {
+    color: mediumpurple
+}
+
+#redish {
+    color: #9E005D;
+}
+/*eggplant - image about choosing by color*/
+#colorE {
+    background-image: url('../Images/eggplant/vs.png');
+    width: 996px;
+    height: 385px;
+}
+/*eggplant - image  choosing by  givol*/
+
+#givolE {
+    background-image: url('../Images/eggplant/givol.png');
+    width: 477px;
+    height: 347px;
+}
+/*eggplant - did you know image and position*/
+#diduknoE {
+    background-image: url('../Images/eggplant/didukno.png');
+    position: absolute;
+    left: 155px;
+    bottom: 360px;
+    width: 439px;
+    height: 120px;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+}
+/*eggplant - image about klipa*/
+
+#klipa {
+    background-image: url('../Images/eggplant/klipa.png');
+    width: 773px;
+    height: 345px;
+    position: relative;
+    right: 300px;
+    margin-top: 50px;
+}
+/* ëggplant - picture of better eggplant*/
+
+#adif{
+    position: relative;
+    right: 180px;
+    bottom: 180px;
+    font-size: 15pt;
+}
+/* eggplant - underlines of "did you know*/
+
+#diduknowE {
+    background-image: url('../Images/eggplant/diduknoE.png');
+    width: 378px;
+    height: 136px;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    position: absolute;
+    bottom: 170px;
+}
+/* eggplant - the part about klipa, changing the position*/
+
+.klipaInfo {
+    margin-right: 50px;
+}
+/* the image of a blub in "did you know"section in every page*/
+
+#blub {
+    background-image: url('../Images/eggplant/blub.png');
+    width: 86px;
+    height: 122px;
+    display: inline-block;
+
+}
+/*blub image margin fixing*/
+
+.blubFix {
+    margin-top: 40px;
+}
+/*eggplant page - underline*/
+
+#underlinesE {
+    background-image: url('../Images/eggplant/underlinesE.png');
+    width: 1163px;
+    height: 600px;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-right: 85px;
+    justify-content:space-around;
+}
+/* fake video eggplant*/
+
+#videoE {
+    background-image: url('../Images/eggplant/videoE.png');
+    width: 126px;
+    height:166px;
+    position: absolute;
+    top: 80px;
+    right: 80px;
+}
+/* did you know part of eggplant style - changing the list color and text*/
+
+.knowPurple {
+    margin-right: 70px;
+    margin-top: 47px;
+    line-height: 1.4;
+}
+
+    .knowPurple > li {
+        list-style: none;
+        position: relative;
+        bottom: 50px;
+        text-align: right;
+        font-size: 20pt;
+        text-align: right;
+    }
+
+    .knowPurple li::before {
+        color: rebeccapurple;
+        display: inline-block;
+        width: 1em;
+        content: "■";
+        padding: 5px;
+    }
+    /*eggplant eye image*/
+#eyeE {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-image: url('../Images/eggplant/eyeE.png');
+}
+/*inactive link class*/
+.notActive {
+    cursor: not-allowed;
+}
+/*index page - inactive tips note*/
+#tips:hover, #tips:focus {
+    color: grey;
+    text-decoration: line-through;
+}
+/*the text inside about page*/
+.aboutInfo {
+    font-size: 20pt;
+    margin-right: 105px;
+    margin-top: -20px;
+    line-height: 1.7;
+}
+/*about page - our images*/
+.imagesGirls{
+    align-content: center;
+    position: relative;
+    right: 230px;
+  
+}
+/*about page - our names under the images*/
+.girlsNames{
+    font-size: 19pt;
+    display: inline-block;
+    margin: 0px 93px;
+    position: relative;
+    bottom: 45px;
+
+}
+/*about page - spacing around the images of the owners*/
+.imagesGirls > img {
+    margin: 0px 50px;
+    display: inline-block;
+}
+
+/*class of position absolute for every element that needs it*/
+.absolute {
+    position: absolute;
+
+
+}
+/*in tomato page, the image  that has a lot of words around it, their positions*/
+#noSpot {
+    top: 409px;
+    left: 832px;
+}
+
+#noHole {
+    top: 282px;
+    left: 795px;
+}
+
+#strech {
+    left: 414px;
+    top: 175px;
+}
+
+#scratch {
+    left: 200px;
+    top: 290px;
+}
+
+#sheka {
+    left: 192px;
+    top: 390px;
+}
+/**in about page - senses picture*/
+#senses {
+    background-image: url('../Images/about/senses.png');
+    width: 163px;
+    height: 183px;
+    position: relative;
+    right: 1103px;
+    bottom: 98px;
+}
+/**in about page - hit logo*/
+#hitLogo {
+    background-image: url('../Images/about/hitlogo.png');
+    width: 306px;
+    height: 199PX;
+    position: relative;
+    top: 130px;
+    right: 520px;
+
+}
+/*in about page - shape of telem faculty link*/
+#telem{
+display: block;
+text-align: center;
+font-weight: bold;
+    font-size: 20pt;
+}
+/*go back to top button in every page*/
+#topBtn {
+    width: 280px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    margin-top: 120px;
+    margin-right: 543px;
+    text-align: center;
+    padding-top: 50px;
+    background-image: url('../Images/4.png');
+    font-size: 20pt;
+}
+/*go back to top button - the link */
+#topLink {
+    position: relative;
+    bottom: 40px;
+
+    font-weight: bold;
+}
+/*inactive video cucumber page*/
+#fakevidC {
+    background-image: url('../Images/cucPage/fakevid.jpg');
+    width: 640px;
+    height: 360px;
+    display: block;
+    background-repeat: no-repeat;
+   background-size:cover;
+}
+/*inactive video eggplant page*/
+
+#fakevidE {
+    width: 640px;
+    height: 360px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../Images/eggplant/fakevidE.jpg');
+}
+/*inactive video tomato page*/
+#fakevidT {
+    width: 640px;
+    height: 360px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../Images/tomPage/fakevidE.jpg');
+}
+/*inputs design in contact us page*/
+
+#userName, #userEmail {
+    display: block;
+    margin: 15px;
+    width: 220px;
+    height: 30px;
+    font-size: 15pt;
+    
+}
+/*inputs design in contact us page*/
+#userMessage {
+    display: block;
+    width: 330px; 
+    height: 150px;
+    margin: 15px;
+    font-size: 15pt;
+}
+/*fixing position of text area*/
+.messagePos {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+/*changing the size of the checkbox in the form*/
+input[type=checkbox] {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+}
+/*border to inputs and text area*/
+textarea, input[type=text] {
+    border: solid 2px #c5c5c5;
+    resize: none;
+}
+    /*design attributes of textarea*/
+    input[type=text]:focus, textarea:focus {
+        background-color: #eef9fd;
+    }
+/*contact us form shape design*/
+form {
+    background-color: #f8f9fb;
+    width: 800px;
+    border-radius: 20px;
+    position: relative;
+    right: 263px;
+    top: 90px;
+    font-size: 21pt;
+    height: 460px;
+    /*border: solid 2px #f8f9fb;*/
+    margin-bottom: 90px;
+}
+/*position fixing of labels*/
+#labelPos{
+  position: relative;
+  top: 60px;
+  right: 40px;
+    display: block;
+}
+/*design elements of sumbit button*/
+input[type=submit] {
+    width: 195px;
+    height: 65px;
+    display: block;
+    position: relative;
+    top: 120px;
+    right: 300px;
+    font-size: 19pt;
+    background-color: #acd8ff;
+    border: none;
+    border-radius: 10px;
+}
+/*mouse hover effects on sumbit button */
+    input[type=submit]:hover, input[type=submit]:focus {
+        background-color: mediumpurple;
+        color: black;
+    }
+    input[type=submit]:active {
+        background-color: #d4bfff;
+    }
+        .sumbitPos {
+            position: absolute;
+            top: 230px;
+            width: 300px;
+        }
+        /*font size of labels in form*/
+#fontSize {
+    font-size: 15pt;
+}
+
+/*changing text color in cucumber to yellow*/
+.yellow {
+    color: #c9b22d;
+}
+/*logo of contact us*/
+#contactLogo {
+    background-image: url('../Images/about/zorkesher.png');
+    width: 321px;
+    height:130px;
+    display:inline-block;
+    position: relative;
+    bottom: 120px;
+    right: 380px;
+}
+/*design and position of skip links button*/
+.skipLinks{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    z-index: 900;
+
+}
+    /*design and position of skip links's links */
+.skipLinks a{
+    position: absolute;
+    top: -3em;
+    left: 1030px;
+    background-color: black;
+    color: white;
+    padding:0.5em 0.75em;
+    font-weight: bold;
+    font-size: 15pt;
+    text-decoration: none;
+}
+.skipLinks a:focus{
+    top: 0;
+}
+/*changing the positioning and margins of sections in map site*/
+.letters {
+    display: inline-table;
+    position: relative;
+    margin: 100px 173px 110px 100px;
+    width: 135px;
+    height: 50px;
+    font-size: 16pt;
+}
+    /*changing the list type in map site*/
+.letters ul li{
+    list-style: square;
+}
+/*moving general pages section*/
+#general_pages {
+    margin-right: 173px;
+    display: block;
+}
+/*making lower part space between h2 map site*/
+.letters h2 {
+    margin-bottom: 10px;
+}
+/*the logo of map site*/
+#boxMap {
+    background-image: url('../Images/about/box.png');
+    width: 247px;
+    height: 187px;
+    display: block;
+    position: relative;
+    right: 895px;
+    bottom: 180px;
+}
+/*icons credit*/
+.credit{
+    font-size: 9pt;
+    text-align: center;
+    position: relative;
+    left: 6px;
+}
+.creditIndex{
+    right: 550px;
+}

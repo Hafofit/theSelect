@@ -1,0 +1,412 @@
+﻿<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>סלקט - מפת אתר </title>
+    <meta name="description" content="the map of the entire site" />
+    <meta name="keywords" content="site map, how to pick fruits, how to pick vegetables, good vegetables" />
+    <meta name="author" content="inbar tuchman, yuval goldstein, hen guy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alef&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="../Images/leaf.png">
+
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+          crossorigin="anonymous">
+</head>
+<body>
+    <div id="container">
+        <article role="article">
+            <div id="bgDark">
+                <header role="banner">
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="Images/index/logo.png" alt="סלקט פשוט לבחור ירקות ופירות" />
+                        </a>
+                    </div>
+                    <nav aria-label="תפריט ניווט משני" id="topNav">
+                        <ul>
+                            <li><a aria-label="טיפים ומיתוסים קישור לא פעיל" class="notActive" href="#">טיפים ומיתוסים</a><span class="leaf"></span></li>
+                            <li><a href="about.html">אודות</a></li>
+                        </ul>
+                    </nav>
+                    <!-- תפריט ניווט ראשי שהוא סטיקי שנשאר על המסך עם המשתמש -->
+                    <nav>
+                        <div aria-hidden="true" id="myNav" class="overlay" align="right">
+                            <a aria-label="לחץ כאן כדי לצאת מתפריט הניווט חזרה לעמוד" javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div aria-hidden="true" href="#" class="overlay-content">
+                                <span id="navLogo"></span>
+                                <h2 aria-expanded="true" class=" fontGveret ">המדריך השלם</h2>
+                                <p>לחץ על האות הראשונה של הפרי או הירק שמעניין אותך ובחר אותו מהמדף!</p>
+                                <a onclick="show_hide(this,'alef')" class="navShape fontGveret" href="#">א</a>
+                                <a class="navShape notActive fontGveret" href="#">ב-ג</a>
+                                <a onclick="show_hide(this,'DaletHet')" class="navShape fontGveret" href="#">ד-ח</a>
+                                <a class="navShape notActive fontGveret" href="#">כ-ל</a>
+                                <a onclick="show_hide(this,'memNun')" class="navShape fontGveret" href="#">מ-נ</a>
+                                <a onclick="show_hide(this,'samehAen')" class="navShape fontGveret" href="#">ס-ע</a>
+                                <a class="navShape notActive fontGveret" href="#">פ-צ</a>
+                                <a class="navShape notActive fontGveret" href="#">ר-ש</a>
+                                <a class="navShape notActive fontGveret" href="#">ת</a>
+
+                                <div class="myElement">
+                                    <span id="alef" class="shelfs twoShelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="rightShelf">
+                                            <a class="relative notActive" href="0#"><img src="images/nav/afrsemon.png" width="43" height="44" alt="" /><span class="navText navTextShelfs">אפרסמון</span></a>
+                                            <a class="relative notActive" href="0#"><img src="images/nav/artishok.png" width="82" height="71" alt="" /><span class="navText navTextShelfs">ארטישוק</span></a>
+                                            <a class="relative notActive" href="0#"><img src="images/nav/avoc.png" width="78" height="67" alt="" /><span class="navText navTextShelfs">אבוקדו</span></a>
+                                            <a class="relative" href="wmelon.html"><img src="images/nav/watermelon.png" width="99" height="90" alt="" /><span class="Fix">אבטיח</span></a>
+                                        </span>
+                                        <span class="leftShelf">
+                                            <a href="#" class="relative notActive"><img src="images/nav/pear.png" width="39" height="51" alt="" /><span class="navText navTextShelfs">אגס</span></a>
+                                            <a href="#" class="relative notActive"> <img src="images/nav/pina.png" width="63" height="128" alt="" /><span class="Fix">אננס</span></a>
+                                            <a href="#" class="relative notActive"><img src="images/nav/ashkolit.png" width="71" height="65" alt="" /><span class="navText navTextShelfs">אשכולית</span></a>
+                                            <a href="#" class="relative notActive"><img src="images/nav/peach.png" width="63" height="62" alt="" /><span class="navText navTextShelfs">אפרסק</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="DaletHet" class="shelf shelfs " aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelf">
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dovdevan.png" width="53" height="48" alt="" /><span class="navText navTextShelf">דובדבן</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dalorit.png" width="59" height="77" alt="" /><span class="navText navTextShelf">דלורית</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/dlat.png" width="74" height="65" alt="" /><span class="navText navTextShelf">דלעת</span></a>
+                                            <a id="hazil" href="eggplant.html" class="relative"><img src="Images/nav/hazil.png" width="78" height="47" alt="" /><span class="navText navTextShelf">חציל</span></a>
+                                            <a id="hasa" href="#" class="relative notActive"><img src="Images/nav/hasa.png" width="83" height="72" alt="" /><span class="navText navTextShelf">חסה</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="memNun" class="shelf shelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelf">
+                                            <a href="cucumber.html" class="relative "><img src="Images/nav/cuc.png" width="81" height="40" alt="" /><span class="navText navTextShelf">מלפפון</span></a>
+                                            <a id="melonNav" href="#" class="relative notActive"><img src="Images/nav/melon.png" width="71" height="74" alt="" /><span class="navText navTextShelf">מלון</span></a>
+                                            <a id="mango" href="#" class="relative notActive"><img src="Images/nav/mango.png" width="62" height="50" alt="" /><span class="navText navTextShelf">מנגו</span></a>
+                                            <a id="mand" href="#.html" class=" notActive relative"><img src="Images/nav/mandarina.png" width="69" height="54" alt="" /><span class="navText navTextShelf">מנדרינה</span></a>
+                                            <a id="nac" href="#" class="relative notActive"><img src="Images/nav/nact.png" width="52" height="48" alt="" /><span class="navText navTextShelf">נקטרינה</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="myElement">
+                                    <span id="samehAen" class="shelf shelfs" aria-label="מדפים עליהם מונחים ירקות ופירות. לחץ על מנת לעבור לעמות הירק">
+                                        <span class="singleShelfFix">
+                                            <a id="selek" class="relative notActive"><img src="Images/nav/selek.png" width="107" height="89" alt="" /><span class="navText navTextShelf">סלק</span></a>
+                                            <a id="seleri" href="#" class="relative notActive"><img src="Images/nav/seleri.png" width="82" height="44" alt="" /><span class="navText navTextShelf">סלרי</span></a>
+                                            <a href="tomato.html" class="relative "><img src="Images/nav/tomato.png" width="44" height="40" alt="" /><span class="navText navTextShelf">עגבנייה</span></a>
+                                            <a href="#" class=" notActive relative"><img src="Images/nav/grapes.png" width="77" height="53" alt="" /><span class="navText navTextShelf">ענבים</span></a>
+                                            <a href="#" class="relative notActive"><img src="Images/nav/armonim.png" width="99" height="48" alt="" /><span class="navText navTextShelf">ערמונים</span></a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!--<span id="book"></span>-->
+
+                            </div>
+                            <!-- הכפתור של התפריט ניווט -->
+                        </div>
+                        <a id="navBtn" href="#0" ;cursor:pointer" onclick="openNav()" aria-label="לחץ כאן לסגירת התפריט וחזרה לעמוד התוכן">
+                            <i class="fa fa-bars navIcon"></i>
+                            <!--<span id="hamburger">&#9776;</span>--> <!--<span class="fontGveret" id="navbtnTxt">למדריך השלם</span>-->
+                        </a>
+                    </nav>
+                    <!-- פה מתחיל תוכן העמוד -->
+                    <div class="tomatoTitle">
+                        <h1 id="about">מפת אתר</h1>
+                        <span id="boxMap"></span>
+                    </div>
+                </header>
+            </div>
+            <div id="posFixTop">
+                <div class="topTriangle" id="topTrianglepg"></div>
+            </div>
+            <section role="region" id="general_pages" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">דפים כלליים</h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a href="index.html">דף הבית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a href="about.html">אודות</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a href="#">צור קשר</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a class="notActive" href="#">טיפים ומיתוסים</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a href="#">ייצוג אינטראקטיבי</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באות א'</h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" אפרסמון קישור לא פעיל" class="notActive" href="#">אפרסמון</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a  aria-label=" ארטישוק קישור לא פעיל" class="notActive" href="#">ארטישוק</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" אבוקדו קישור לא פעיל" class="notActive" href="#">אבוקדו</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a id="lightp" class="notActive" href="wmelon.html">אבטיח</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" אגס קישור לא פעיל" class="notActive" href="#">אגס</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="אשכולית קישור לא פעיל" class="notActive" href="#">אשכולית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="אפרסק קישור לא פעיל"  class="notActive" href="#">אפרסק</a>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות ב'-ג' </h2>
+                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class=" "></div>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" ברוקולי קישור לא פעיל" class="notActive" href="#">ברוקולי</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class=" ">
+                        <a aria-label=" בצל קישור לא פעיל" class="notActive" href="#">בצל</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="בננה קישור לא פעיל" class="notActive" href="#">בננה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="בטטה קישור לא פעיל" class="notActive" href="wmelon.html">בטטה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" גזר קישור לא פעיל" class="notActive" href="#">גזר</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" גויאבה קישור לא פעיל" class="notActive" href="#">גויאבה</a>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות ד'-ח' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" דובדבן קישור לא פעיל" class="notActive" href="#">דובדבן</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="דלורית קישור לא פעיל" class="notActive" href="#">דלורית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="דלעת קישור לא פעיל" class="notActive" href="#">דלעת</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a id="lightp" href="eggplant.html">חציל</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="חסה קישור לא פעיל" class="notActive" href="#">חסה</a>
+                    </li>
+
+                </ul>
+            </section>
+
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות כ'-ל' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="כרוב קישור לא פעיל"  class="notActive" href="#">כרוב</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="כרוב ניצנים קישור לא פעיל" class="notActive" href="#">כרוב ניצנים</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" כרובית קישור לא פעיל" class="notActive" href="#">כרובית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="ליים קישור לא פעיל" class="notActive" href="#">ליים</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="לימון קישור לא פעיל" class="notActive" href="#">לימון</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="ליצ'י קישור לא פעיל" class="notActive" href="#">ליצ'י</a>
+                    </li>
+                </ul>
+
+            </section>
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות מ'-נ' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a id="lightp" href="cuc.html">מלפפון</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="מלון קישור לא פעיל" class="notActive" href="#">מלון</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="מנגו קישור לא פעיל" class="notActive" href="#">מנגו</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="מנדרינה קישור לא פעיל" class="notActive" href="#">מנדרינה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="נקטרינה קישור לא פעיל" class="notActive" href="#">נקטרינה</a>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות ס'-ע' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="סלק קישור לא פעיל" class="notActive" href="#">סלק</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="סלרי קישור לא פעיל" class="notActive" href="#">סלרי</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a id="lightp" href="tomato.html">עגבנייה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="ענבים קישור לא פעיל" class="notActive" href="#">ענבים</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="ערמונים קישור לא פעיל" class="notActive" href="#">ערמונים</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">ירקות ופירות באותיות פ'-צ' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="פלפל קישור לא פעיל" class="notActive" href="#">פלפל</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class=" ">
+                        <a aria-label="פמולית קישור לא פעיל" class="notActive" href="#">פומלית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="פמולה קישור לא פעיל" class="notActive" href="#">פומלה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="פטל קישור לא פעיל" class="notActive" href="#">פטל</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="פפאיה קישור לא פעיל" class="notActive" href="#">פפאיה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="צנון קישור לא פעיל" class="notActive" href="#">צנון</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="צנונית קישור לא פעיל" class="notActive" href="#">צנונית</a>
+                    </li>
+                </ul>
+
+            </section>
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות ק'-ר' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="קוקוס קישור לא פעיל"class="notActive" href="#">קוקוס</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="קיווי קישור לא פעיל" class="notActive" href="#">קיווי</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" קישוא קישור לא פעיל" class="notActive" href="#">קישוא</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="קלמנטינה קישור לא פעיל" class="notActive" href="#">קלמנטינה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="רימון קישור לא פעיל" class="notActive" href="#">רימון</a>
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section role="region" class="letters">
+                <h2 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">ירקות ופירות באותיות ש'-ת' </h2>
+                <ul data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="שזיף קישור לא פעיל" class="notActive" href="#">שזיף</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="שומר קישור לא פעיל" class="notActive" href="#">שומר</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" שסק קישור לא פעיל" class="notActive" href="#">שסק</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="שעועית קישור לא פעיל" class="notActive" href="#">שעועית</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="תפוח אדמה קישור לא פעיל" class="notActive" href="#">תפוח אדמה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label=" תרד קישור לא פעיל" class="notActive" href="#">תרד</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="תאנה קישור לא פעיל "class="notActive" href="#">תאנה</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class=" ">
+                        <a aria-label="תירס קישור לא פעיל" class="notActive" href="#">תירס</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="תמר קישור לא פעיל" class="notActive" href="#">תמר</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="תפוז קישור לא פעיל" class="notActive" href="#">תפוז</a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" class="">
+                        <a aria-label="תפוח קישור לא פעיל" class="notActive" href="#">תפוח</a>
+                    </li>
+                </ul>
+
+            </section>
+
+            <div id="lowerTri" class="triPos"></div>
+            <div class="bgLightClrmap bgLightClr">
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" id="topBtn"><a id="topLink" href="#top">לחזרה למעלה<br /> לחץ כאן</a></div>
+                <footer id="sitemapFooter" role="contentinfo">
+                    <ul>
+                        <li><a href="siteMap.html"><b>מפת האתר</b></a><span class="leaf"></span></li>
+                        <li><a target="_blank" href="https://inbar662.github.io/choose_wise/fridge-try.html">ייצוג אינטראקטיבי</a><span class="leaf"></span></li>
+
+                        <li><a href="contact.html">צור קשר</a></li>
+                    </ul>
+                </footer>
+                <div class="credit"><a href="https://www.freepik.com/free-photos-vectors/background">Background photo אבוקדוcreated by rawpixel.com - www.freepik.com</a></div>
+                <div class="credit"><a href="https://www.freepik.com/free-photos-vectors/background">Background photo created by 4045 - www.freepik.com</a></div>
+            </div>
+
+        </article>
+        
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
